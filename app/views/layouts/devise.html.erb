@@ -23,6 +23,9 @@
 
   <body>
     <%= render(partial: 'shared/navbar') %>
-    <%= yield %>
+    <div>
+      <%= logo(size: 'text-xl', extra_classes: 'hover:text-indigo-600 transition')%>
+      <%= yield %>
+    </div>
   </body>
 </html>
