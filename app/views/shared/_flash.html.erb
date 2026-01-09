@@ -1,2 +1,7 @@
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+<% flash.each do |type, message| %>
+<div data-controller="toast">
+    <div class="toast-body">
+        <%= message %>
+    </div>
+</div>
+<% end %>

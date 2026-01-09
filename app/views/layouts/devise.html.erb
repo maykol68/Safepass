@@ -22,8 +22,8 @@
   </head>
 
   <body>
-    <%= render(partial: 'shared/navbar') %>
     <div>
+      <%= render(partial: 'shared/flash') %>
       <%= logo(size: 'text-xl', extra_classes: 'hover:text-indigo-600 transition')%>
       <%= yield %>
     </div>
