@@ -8,4 +8,4 @@ import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
 import ToastController from "./toast_controller"
-application.register("Toast", ToastController)
+application.register("toast", ToastController)
