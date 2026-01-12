@@ -1,7 +1,9 @@
-import { Controller } from "@hotwired/stimulus"
+import { Controller } from "@hotwired/stimulus";
 
 export default class extends Controller {
   connect() {
-    console.log("Hi from toast")
+    setTimeout(() => {
+      this.element.classList.add("opacity-0");
+    }, 3000);
   }
 }

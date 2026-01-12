@@ -10,6 +10,8 @@
     <%= csrf_meta_tags %> <%= csp_meta_tag %> <%= yield :head %> <%# Enable PWA
     manifest for installable apps (make sure to enable in config/routes.rb too!)
     %> <%#= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.turbo.min.js"></script>
+
 
     <link rel="icon" href="/icon.png" type="image/png" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -22,7 +24,9 @@
   </head>
 
   <body>
-    <%= render(partial: 'shared/flash') %>
+    <%= render(partial: 'shared/flash', locals: {message: flash[:notice]}) %>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+
     <%= render(partial: 'shared/navbar') %>
     <%= yield %>
   </body>
