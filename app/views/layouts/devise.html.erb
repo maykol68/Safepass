@@ -23,9 +23,12 @@
 
   <body>
     <div>
-      <%= render(partial: 'shared/flash') %>
-      <%= logo(size: 'text-xl', extra_classes: 'hover:text-indigo-600 transition')%>
-      <%= yield %>
+      <%= render(partial: 'shared/flash') %> 
+      <%= render(partial: 'shared/navbar') if account_page? %> 
+      <% unless account_page? %>
+        <%= logo %>
+        <% end %>
+      <%= logo(size: 'text-xl', extra_classes:'hover:text-indigo-600 transition')%> <%= yield %>
     </div>
   </body>
 </html>

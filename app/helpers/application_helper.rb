@@ -7,4 +7,8 @@ module ApplicationHelper
       ])
     end
   end
+
+  def account_page?
+     current_page?(edit_user_registration_path)
+  end
 end
