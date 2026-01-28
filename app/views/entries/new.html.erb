@@ -1,23 +1,22 @@
 <h1>New Entry</h1>
 <%= form_with(model: @entry) do |form| %>
-    <div>
-        <%= form.text_field(:name, placeholder: "Name", class:"") %>
-        <%= form.label(:name) %>
-    </div>
+<div>
+  <%= form.label(:name) %> <%= form.text_field(:name, placeholder: "Name",
+  class:"") %>
+</div>
 
-    <div>
-        <%= form.text_field(:url, placeholder: "Url", class:"") %>
-        <%= form.label(:url) %>
-    </div>
+<div>
+  <%= form.label(:url) %> <%= form.text_field(:url, placeholder: "Url",
+  class:"") %>
+</div>
 
-    <div>
-        <%= form.text_field(:username, placeholder: "Username", class:"") %>
-        <%= form.label(:username) %>
-    </div>
+<div>
+  <%= form.label(:username) %> <%= form.text_field(:username, placeholder:
+  "Username", class:"") %>
+</div>
 
-    <div>
-        <%= form.text_field(:password, placeholder: "Password", class:"") %>
-        <%= form.label(:password) %>
-    </div>
-    <%= form.submit('Create new entry', class: "") %>
-<% end %>
+<div>
+  <%= form.label(:password) %> <%= form.text_field(:password, placeholder:
+  "Password", class:"") %>
+</div>
+<%= form.submit('Create new entry', class: "") %> <% end %>
